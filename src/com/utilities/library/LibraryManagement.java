@@ -17,7 +17,7 @@ public class LibraryManagement {
 
 	private Map<Integer, Integer> libraryUserMap = new HashMap<Integer, Integer>();
 	
-	public void userBook(int libId, int userId) {
+	public synchronized void userBook(int libId, int userId) {
 		libraryUserMap.put(libId,userId);
 	}
 	
